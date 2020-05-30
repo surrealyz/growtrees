@@ -108,8 +108,6 @@ def main(args):
     -b -z -r -s robust -e 0.3 -c gini -n 784 --nt 1000 -d 6
     '''
     for dataset in ['binary_mnist', 'breast_cancer', 'cod-rna', 'ijcnn', 'webspam', 'covtype.scale01', 'fashion', 'ori_mnist', 'Sensorless']:
-        if dataset in ['binary_mnist', 'breast_cancer', 'cod-rna', 'ijcnn']:
-            continue
         fname = datasets[dataset]
         # track time for each one
         start = time.time()

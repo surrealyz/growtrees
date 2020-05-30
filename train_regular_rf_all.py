@@ -92,8 +92,6 @@ def main(args):
     -b -z -c gini -n 784 --nt 60 -d 8
     '''
     for dataset, fname in datasets.items():
-        if dataset in ['binary_mnist', 'breast_cancer', 'cod-rna', 'covtype.scale01']:
-            continue
         # track time for each one
         start = time.time()
         train, test = fname
