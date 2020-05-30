@@ -3,16 +3,16 @@ Code for the paper "[Cost-Aware Robust Tree Ensembles for Security Applications]
 
 We utilize security domain knowledge to increase the evasion cost against security classifiers, specifically, tree ensemble models that are widely used by security tasks. We propose a new cost modeling method to capture the domain knowledge of features as constraint, and then we integrate the cost-driven constraint into the node construction process to train robust tree ensembles. During the training process, we use the constraint to find data points that are likely to be perturbed given the costs of the features, and we optimize the quality of the trees using a new robust training algorithm. Our cost-aware training method can be applied to different types of tree ensembles, including random forest model (scikit-learn) and gradient boosted decision trees (Xgboost).
 
-## Training algorithm
+## Robust training algorithm
 
 ### Download benchmark datasets
 
-* Run `data/download_data.sh`, [source](https://github.com/chenhongge/RobustTrees/blob/master/data/download_data.sh)
+* Run `data/download_data.sh` [(source)](https://github.com/chenhongge/RobustTrees/blob/master/data/download_data.sh)
 
 ### Implementation in scikit-learn
 
 * Clone our dev version of [scikit-learn](https://github.com/surrealyz/scikit-learn/)
-* Switch to the [robust](https://github.com/surrealyz/scikit-learn/tree/robust) branch
+* Check out the [robust](https://github.com/surrealyz/scikit-learn/tree/robust) branch
 * We recommend using a virtualenv to install this
 * After activating your virtualenv, install the required packages ```pip install numpy scipy joblib threadpoolctl Cython```
 * Then install sklearn with our robust training algorithm ```python setup.py install```
@@ -26,3 +26,13 @@ We utilize security domain knowledge to increase the evasion cost against securi
   ```
 
 ### Implementation in Xgboost
+
+* Clone our dev version of [xgboost RobustTrees](https://github.com/surrealyz/RobustTrees)
+* Check out the [greedy](https://github.com/surrealyz/RobustTrees/tree/greedy) branch
+* Run `build.sh`
+* Run `data/download_data.sh` to get libsvm datasets
+* Use data/dump_data.py script to generate csv training data. Reading libsvm has issues.
+* Example usage
+  ```
+  ./xgboost data/breast_cancer.greedy.conf
+  ```
