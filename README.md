@@ -5,10 +5,6 @@ We utilize security domain knowledge to increase the evasion cost against securi
 
 ## Robust training algorithm
 
-### Download benchmark datasets
-
-* Run `data/download_data.sh` [(source)](https://github.com/chenhongge/RobustTrees/blob/master/data/download_data.sh)
-
 ### Implementation in scikit-learn
 
 * Clone our dev version of [scikit-learn](https://github.com/surrealyz/scikit-learn/)
@@ -16,6 +12,7 @@ We utilize security domain knowledge to increase the evasion cost against securi
 * We recommend using a virtualenv to install this
 * After activating your virtualenv, install the required packages ```pip install numpy scipy joblib threadpoolctl Cython```
 * Then install sklearn with our robust training algorithm ```python setup.py install```
+* Run `data/download_data.sh` under the current repo [(source)](https://github.com/chenhongge/RobustTrees/blob/master/data/download_data.sh)
 * Example usage
   ```
   python train_rf_one.py --train data/binary_mnist0
@@ -31,7 +28,7 @@ We utilize security domain knowledge to increase the evasion cost against securi
 * Check out the [greedy](https://github.com/surrealyz/RobustTrees/tree/greedy) branch
 * Run `build.sh`
 * Run `data/download_data.sh` to get libsvm datasets
-* Use data/dump_data.py script to generate csv training data. Reading libsvm has issues.
+* Use `data/dump_data.py` script to generate csv training data. Reading libsvm has issues.
 * Example usage
   ```
   ./xgboost data/breast_cancer.greedy.conf
