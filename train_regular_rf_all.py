@@ -18,58 +18,27 @@ def parse_args():
 datasets = {"binary_mnist": ['binary_mnist0', 'binary_mnist0.t'],
             "breast_cancer": ['breast_cancer_scale0.train', 'breast_cancer_scale0.test'],
             "cod-rna": ['cod-rna_s', 'cod-rna_s.t'],
-            "covtype.scale01": ['covtype.scale01.train0', 'covtype.scale01.test0'],
-            "fashion": ['fashion.train0', 'fashion.test0'],
-            "ijcnn": ['ijcnn1s0', 'ijcnn1s0.t'],
-            "ori_mnist": ['ori_mnist.train0', 'ori_mnist.test0'],
-            "Sensorless": ['Sensorless.scale.tr0', 'Sensorless.scale.val0'],
-            "webspam": ['webspam_wc_normalized_unigram.svm0.train', 'webspam_wc_normalized_unigram.svm0.test']}
+            "ijcnn": ['ijcnn1s0', 'ijcnn1s0.t']}
 
 tree_size = {"binary_mnist": [60, 14],
             "breast_cancer": [20, 6],
             "cod-rna": [60, 14],
-            "covtype.scale01": [100, 24],
-            "fashion": [100, 24],
-            "ijcnn": [80, 14],
-            "ori_mnist": [100, 14],
-            "Sensorless": [60, 14],
-            "webspam": [200, 14]}
+            "ijcnn": [80, 14]}
 
 n_feat = {"binary_mnist": 784,
             "breast_cancer": 10,
             "cod-rna": 8,
-            "covtype.scale01": 54,
-			"diabetes": 8,
-            "fashion": 784,
-            "higgs": 28,
-            "ijcnn": 22,
-            "ori_mnist": 784,
-            "Sensorless": 48,
-            "webspam": 254}
+            "ijcnn": 22}
 
 zero_based = {"binary_mnist": True,
             "breast_cancer": False,
             "cod-rna": True,
-            "covtype.scale01": False,
-			"diabetes": False,
-            "fashion": False,
-            "higgs": True,
-            "ijcnn": False,
-            "ori_mnist": False,
-            "Sensorless": False,
-            "webspam": False}
+            "ijcnn": False}
 
 binary_class = {"binary_mnist": True,
             "breast_cancer": True,
             "cod-rna": True,
-            "covtype.scale01": False,
-			"diabetes": True,
-            "fashion": False,
-            "higgs": True,
-            "ijcnn": True,
-            "ori_mnist": False,
-            "Sensorless": False,
-            "webspam": True}
+            "ijcnn": True}
 
 def main(args):
     data_path = 'data/'
