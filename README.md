@@ -34,10 +34,3 @@ We utilize security domain knowledge to increase the evasion cost against securi
   ./xgboost data/breast_cancer.greedy.conf
   ```
 
-## Evaluating robustness
-
-...
-
-## Training cost-aware robust trees for twitter spam detection
-
-...
