@@ -1,5 +1,5 @@
 # Cost-Aware Robust Tree Ensembles for Security Applications
-Code for the paper "[Cost-Aware Robust Tree Ensembles for Security Applications](https://arxiv.org/abs/1912.01149)", Yizheng Chen, Shiqi Wang, Weifan Jiang, Asaf Cidon, Suman Jana.
+Code for the paper "[Cost-Aware Robust Tree Ensembles for Security Applications](https://arxiv.org/abs/1912.01149)" (Usenix Security'21), Yizheng Chen, Shiqi Wang, Weifan Jiang, Asaf Cidon, Suman Jana.
 
 We utilize security domain knowledge to increase the evasion cost against security classifiers, specifically, tree ensemble models that are widely used by security tasks. We propose a new cost modeling method to capture the domain knowledge of features as constraint, and then we integrate the cost-driven constraint into the node construction process to train robust tree ensembles. During the training process, we use the constraint to find data points that are likely to be perturbed given the costs of the features, and we optimize the quality of the trees using a new robust training algorithm. Our cost-aware training method can be applied to different types of tree ensembles, including random forest model (scikit-learn) and gradient boosted decision trees (Xgboost).
 
